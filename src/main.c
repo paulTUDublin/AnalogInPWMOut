@@ -99,14 +99,14 @@ void pinMode(GPIO_TypeDef *Port, uint32_t BitNumber, uint32_t Mode)
 void initTimer2(void)
 {
     RCC->APB1ENR1 |= (1 << 0); // enable Timer 2
-    TIM2->CR1 = 0;
+    TIM2->CR1 = 0;             // Disable counter
     TIM2->CCMR2 = (0b110 << 12) + (1 << 11)+(1 << 10);
     TIM2->CCER |= (1 << 12);
     TIM2->ARR = 1000-1;
     TIM2->CCR4 = 500;
     TIM2->EGR |= (1 << 0);
     TIM2->CR1 = (1 << 7);
-    TIM2->CR1 |= (1 << 0);  
+    TIM2->CR1 |= (1 << 0);      // Enable counter
 }
 void setTimer2Duty(int duty)
 {
