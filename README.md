@@ -1,6 +1,6 @@
 # AnalogInPWMOut
 
-The project included here is the basic operation of the analog-to-digital converter (ADC) on the STM32L432KC. Helper functions have been provided that handle the configuration of the pin modes (pinMode()), initialisation fo the ADC (initADC()), and reading of the ADC (readADC()). 
+The project included here is the basic operation of the analog-to-digital converter (ADC) on the STM32L432KC. Helper functions have been provided that handle the configuration of the pin modes (`pinMode()`), initialisation of the ADC (`initADC()`), and reading of the ADC (`readADC()`). 
 Please ensure you reveiw these function before uplaoding the code to your board.
 This builds upon the work in [AnalogIn](https://github.com/paulTUDublin/AnalogIn) and uses the analog input value to modulate the the duty cycle of a PWM output pin.
 
