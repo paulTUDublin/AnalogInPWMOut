@@ -23,6 +23,7 @@ int main()
         if (vin > 2047)
         {
             GPIOB->ODR |= (1 << 3);
+            int x = 15; 
         }
         else
         {
